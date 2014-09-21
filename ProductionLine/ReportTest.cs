@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.IO;
 using NUnit.Framework;
 
 namespace ProductionLine
@@ -26,7 +24,8 @@ namespace ProductionLine
             var output = new Report(p, robot).report();
 
             string expected = "FACTORY REPORT\n"
-                              + "Machine mixer\nMachine extruder\n"
+                              + "Machine mixer\n"
+							  + "Machine extruder\n"
                               + "Machine oven bin=chips\n\n"
                               + "Robot location=extruder bin=paste\n" + "========\n";
 
